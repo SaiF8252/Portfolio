@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saiful | .NET Developer</title>
+
+<!-- ✅ Handwriting Font -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), #0b0b0b),
+    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* NAME (HANDWRITING STYLE) */
+.name {
+    font-size: 65px;
+    color: gold;
+    letter-spacing: 6px;
+    font-family: "Dancing Script", cursive;
+    font-style: italic;
+}
+
+/* Letter animation */
+.name span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px) rotate(-10deg);
+    animation: write 0.6s forwards;
+}
+
+/* ROLE */
+.role {
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    font-style: italic;
+    color: #ccc;
+}
+
+.role span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 0.5s forwards;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+}
+
+.navbar a {
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: purple;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 100vh;
+    scroll-margin-top: 80px;
+}
+
+/* BOX */
+.section-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border: 2px solid purple;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.03);
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.2);
+}
+
+.section-box:hover {
+    border-color: gold;
+    box-shadow: 0 0 25px purple;
+    transform: translateY(-5px);
+}
+
+/* CARDS */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    width: 260px;
+    border-radius: 10px;
+    border: 1px solid gold;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: purple;
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px purple;
+}
+
+/* SKILLS */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+.skills-list li {
+    background: rgba(255,255,255,0.05);
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-left: 4px solid purple;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.skills-list li::before {
+    content: "✔";
+    color: gold;
+    margin-right: 10px;
+}
+
+.skills-list li:hover {
+    background: rgba(128,0,128,0.15);
+    transform: translateX(5px);
+}
+
+/* ANIMATIONS */
+@keyframes write {
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1 class="name">SAIFUL</h1>
+    <p class="role" id="roleText"></p>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+    <div class="section-box">
+        <h2>About</h2>
+        <p>
+            I am Md Saiful Islam, a passionate .NET Developer specializing in building scalable and user-friendly web applications using C#, ASP.NET Core, and modern web technologies.
+        </p>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <div class="section-box">
+        <h2>Projects</h2>
+
+        <div class="card-container">
+            <a href="https://github.com/Saif8252/Hospital-Management-System" target="_blank" class="card">
+                Hospital Management System
+            </a>
+
+            <a href="https://github.com/Saif8252/Two-type-Chat-APP-" target="_blank" class="card">
+                Messenger (HTML, CSS, JS)
+            </a>
+
+            <a href="https://github.com/SaiF8252/ExamApp" target="_blank" class="card">
+                Inventory System (MVC + Auth)
+            </a>
+
+            <a href="https://github.com/SaiF8252/angular-with-corewebapi-binding" target="_blank" class="card">
+                Library Management (Angular)
+            </a>
+
+            <a href="https://github.com/SaiF8252/LibraryManging-React-api" target="_blank" class="card">
+                Library Management (React)
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section">
+    <div class="section-box">
+        <h2>Skills</h2>
+
+        <ul class="skills-list">
+            <li>C#</li>
+            <li>ASP.NET Core</li>
+            <li>ASP.NET MVC</li>
+            <li>SQL & Database Management</li>
+            <li>REST APIs</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Node.js & Express.js</li>
+            <li>React.js</li>
+            <li>Angular</li>
+            <li>.NET MAUI</li>
+        </ul>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <div class="section-box">
+        <h2>Contact</h2>
+
+        <div class="card-container">
+            <a href="mailto:msisaif1999@gmail.com" class="card">Email Me</a>
+            <a href="https://wa.me/8801862208252" class="card">WhatsApp Me</a>
+        </div>
+    </div>
+</div>
+
+<!-- HERO ANIMATION SCRIPT -->
+<script>
+const name = "SAIFUL";
+const nameElement = document.querySelector(".name");
+
+nameElement.innerHTML = "";
+
+[...name].forEach((char, i) => {
+    let span = document.createElement("span");
+    span.textContent = char;
+    span.style.animationDelay = (i * 0.2) + "s";
+    nameElement.appendChild(span);
+});
+
+// ROLE animation
+const roleText = ".NET DEVELOPER";
+const roleEl = document.getElementById("roleText");
+
+roleEl.innerHTML = "";
+
+[...roleText].forEach((char, i) => {
+    let span = document.createElement("span");
+    span.textContent = char;
+    span.style.animationDelay = (i * 0.08 + 1.5) + "s";
+    roleEl.appendChild(span);
+});
+</script>
+
+</body>
+</html>
